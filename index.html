@@ -1,108 +1,118 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Covid-19 India Tracker</title>
-  </head>
-  <body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Navbar -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@500&family=Karla:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles2.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Covid-19 India Tracker</title>
+</head>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">COVID-19 India Tracker</a>
+<body>
+
+  <!-- Navbar -->
+
+  <section class="section-1">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Covid-19</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item ">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <ul class="navbar-nav mr-auto nav-list-cust">
+          <!-- <li class="nav-item active">
+              <a class="nav-link" href="index.html">Covid-19 India Tracker<span class="sr-only">(current)</span></a>
+            </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="index2.html">More Information</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">More Information</a>
+            <a class="nav-link" href="helpline.html">Helpline Numbers</a>
           </li>
-
+        </ul>
       </div>
     </nav>
+  </section>
 
 
 
-    <!-- Display total cases -->
-    <div class="container" align = 'center'>
-      <div class="row">
-        <div class="con col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <h2>Confirmed</h2>
-          <img src="Images\virus.png" alt=""><br>
-          <h3 class = 'confirmed'></h3>
-        </div>
+  <!-- Display total cases -->
+  <div class="container" align='center'>
+    <div class="row">
+      <div class="con col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <h2>Confirmed</h2>
+        <img src="Images\virus.png" alt=""><br>
+        <h3 class='confirmed'></h3>
+      </div>
 
-        <div class= "act col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <h2>Pending</h2>
-          <img src="Images\cough.png" alt=""><br>
-          <h3 class = 'active'></h3>
-        </div>
+      <div class="act col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <h2>Pending</h2>
+        <img src="Images\cough.png" alt=""><br>
+        <h3 class='active'></h3>
+      </div>
 
-        <div class="rec col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <h2>Recovered</h2>
-          <img src="Images\heart.png" alt=""><br>
-          <h3 class = 'recovered'></h3>
-        </div>
+      <div class="rec col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <h2>Recovered</h2>
+        <img src="Images\heart.png" alt=""><br>
+        <h3 class='recovered'></h3>
+      </div>
 
-        <div class="dec col-lg-3 col-md-3 col-sm-6 col-xs-6">
-          <h2>Deceased</h2>
-          <img src="Images\death.png" alt=""><br>
-          <h3 class = 'deaths'></h3>
-        </div>
-
+      <div class="dec col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <h2>Deceased</h2>
+        <img src="Images\death.png" alt=""><br>
+        <h3 class='deaths'></h3>
       </div>
 
     </div>
 
-
-    <!-- Graph -->
-    <div class="container">
-        <h1 align="center">Rise of COVID19 in India</h1>
-        <div id="chartContainer"></div>
-    </div>
+  </div>
 
 
-    <!-- Statewise Cases  -->
-
-    <div class="container" >
-      <h1 align="center">Statewise Cases in India</h1>
-      <table align = "center">
-        <thead align = "right">
-          <th id = "states"> States/UT</th>
-          <th class="con">Confirmed</th>
-          <th class="act"> Pending</th>
-          <th class="rec"> Recovered</th>
-          <th class = 'dec'> Deceased</th>
-        </thead>
-      </table>
-    </div>
+  <!-- Graph -->
+  <div class="container">
+    <h1 align="center">Rise of COVID19 in India</h1>
+    <div id="chartContainer"></div>
+  </div>
 
 
+  <!-- Statewise Cases  -->
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script type="text/javascript" src="table.js"></script>
-    <script type="text/javascript" src="graph.js"> </script>
-    <script type="text/javascript" src="events.js"></script>
-  </body>
+  <div class="container">
+    <h1 align="center">Statewise Cases in India</h1>
+    <table align="center">
+      <thead align="right">
+        <th id="states"> States/UT</th>
+        <th class="con">Confirmed</th>
+        <th class="act"> Pending</th>
+        <th class="rec"> Recovered</th>
+        <th class='dec'> Deceased</th>
+      </thead>
+    </table>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="table.js"></script>
+  <script type="text/javascript" src="graph.js"> </script>
+  <script type="text/javascript" src="events.js"></script>
+</body>
+
 </html>

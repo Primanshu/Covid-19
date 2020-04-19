@@ -2,6 +2,12 @@ body{
   font-family: 'Josefin Sans', sans-serif;
   background: #f7f7f7;
 }
+.navbar{
+    font-family: 'Karla', sans-serif;
+}
+section-1{
+  font-family: 'Baloo Bhaina 2', cursive;
+}
 h2,h3{
   font-weight: bold;
 }
@@ -78,6 +84,9 @@ button{
   font-weight: bold;
   margin-bottom: 15px;
   background: #f7f7f7;
+}
+.footer-index{
+  background-color: #c70039;
 }
 @media only screen and (min-width: 1000px) {
   td{
