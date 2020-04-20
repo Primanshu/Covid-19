@@ -3,7 +3,21 @@ body{
   background: #f7f7f7;
   font-size: 1.3em;
 }
-
+.navbar-cust{
+  background-color: #ce0f3d;
+}
+.navbar{
+    font-family: 'Karla', sans-serif;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+.navbar-dark .navbar-nav .active > .nav-link{
+  color: rgba(255,255,255,.5);
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+  color: white;
+}
 #head{
   margin-top: 70px;
 }
@@ -27,6 +41,9 @@ footer{
   color: white;
   padding-top: 17px;
   margin-top: 14px;
+  background-color: #ce0f3d;
+  font-family: cursive !important;
+  text-align: center;
 }
 @media only screen and (min-width: 1000px) {
   .vid{
