@@ -1,130 +1,164 @@
-body{
+body {
   font-family: 'Josefin Sans', sans-serif;
   background: #f7f7f7;
+  font-size: 1.3em;
 }
-.navbar{
-    font-family: 'Karla', sans-serif;
-}
-section-1{
-  font-family: 'Baloo Bhaina 2', cursive;
-}
-h2,h3{
+
+h2, h3 {
   font-weight: bold;
 }
-h1{
+
+h1 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 60px;
   font-weight: bold;
 }
-img{
+
+.navbar-cust {
+  background-color: #ce0f3d;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  color: white;
+}
+img {
   max-width: 65%;
   max-height: 65%;
 }
-.row{
+
+.row {
   margin-top: 90px;
 }
-#chartContainer{
+
+#chartContainer {
   height: 450px;
   opacity: 0.7;
 }
-#states{
+
+#states {
   text-align: left;
 }
-.trEvent{
-  background:#d4d2d2;
+
+.trEvent {
+  background: #d4d2d2;
 }
-.trow{
+
+.trow {
   transition: 1.0s;
 }
-.Event{
+
+.Event {
   transition: 1s;
   transform: scale(1.2);
 }
-.con{
+
+.con {
   color: #cf0000;
   transition: 1s;
   cursor: pointer;
 }
-.act{
+
+.act {
   color: #001dc4;
   transition: 1s;
   cursor: pointer;
 }
 
-.rec{
+.rec {
   color: #04b01b;
   transition: 1s;
   cursor: pointer;
 }
 
-.dec{
+.dec {
   color: #cdd923;
   transition: 1s;
   cursor: pointer;
 }
-.state-name{
+
+.state-name {
   font-weight: bold;
 }
-tr{
+
+tr {
   border-bottom: 1px solid lightgrey;
 }
-td{
+
+td {
   text-align: right;
 }
-.one{
+
+.one {
   text-align: left;
 }
-th{
+
+th {
   width: 5%;
 }
-button{
+
+button {
   border: 0px;
   text-align: left;
   font-weight: bold;
   margin-bottom: 15px;
   background: #f7f7f7;
 }
-.footer-index{
-  background-color: #c70039;
+
+footer {
+  height: 65px;
+  color: white;
+  padding-top: 17px;
+  margin-top: 14px;
+  background-color: #ce0f3d;
+  text-align: center;
 }
+
 @media only screen and (min-width: 1000px) {
-  td{
+  td {
     font-size: 1.4em;
   }
-  th{
+
+  th {
     font-size: 1.6em;
   }
 }
+
 @media only screen and (max-width: 1000px) {
-  td{
+  td {
     font-size: 1em;
   }
-  th{
+
+  th {
     font-size: 1.4em;
   }
 }
+
 @media only screen and (max-width: 750px) {
-  td{
+  td {
     font-size: 0.8em;
   }
-  th{
+
+  th {
     font-size: 1em;
   }
 }
+
 @media only screen and (max-width: 500px) {
-  td{
+  td {
     font-size: 0.8em;
   }
-  th{
+
+  th {
     font-size: 1em;
   }
 }
+
 @media only screen and (max-width: 400px) {
-  td{
+  td {
     font-size: 0.7em;
   }
-  th{
+
+  th {
     font-size: 0.7em;
   }
 }

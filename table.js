@@ -11,6 +11,7 @@ function sortByProperty(property){
       return 0;
    }
 }
+var d ;
 
 function write2(st)
 {
@@ -23,27 +24,31 @@ function write2(st)
   for(var i=0;i<row.length;i++){
     var cell = row.eq(i+1).find("td");
     cell.eq(0).addClass("one");
-    console.log(st);
-    var acti = parseInt( st[i].deltaconfirmed ) - parseInt(st[i].deltarecovered) - parseInt(st[i].deltadeaths);
-    cell.eq(1).append("<br> <span class = \"con \"> <i class = \"fa fa-caret-up \"> </i>" + st[i].deltaconfirmed + "</span>");
+
+    var rec = st[i].deltarecovered;
+    var con = st[i].deltaconfirmed;
+    var dec = st[i].deltadeaths;
+
+    var acti = parseInt( con ) - parseInt(rec) - parseInt(dec);
+    cell.eq(1).append("<br> <span class = \"con \"> <i class = \"fa fa-caret-up \"> </i>" + con + "</span>");
     cell.eq(2).append("<br> <span class = \"act \"> <i class = \"fa fa-caret-up \"> </i>" +acti + "</span>");
-    cell.eq(3).append("<br> <span class = \"rec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i].deltarecovered + "</span>");
-    cell.eq(4).append("<br> <span class = \"dec \"> <i class = \"fa fa-caret-up \"> </i>" +st[i].deltadeaths + "</span>");
+    cell.eq(3).append("<br> <span class = \"rec \"> <i class = \"fa fa-caret-up \"> </i>" +rec + "</span>");
+    cell.eq(4).append("<br> <span class = \"dec \"> <i class = \"fa fa-caret-up \"> </i>" +dec + "</span>");
   }
 }
 function changeOrder(prop)
 {
 
   console.log(prop);
-  $.getJSON("https://api.covid19india.org/data.json",function(data){
 
-    var states = data.statewise;
+
+    var states = d.statewise;
 
     var st = states;
     st.sort(sortByProperty(prop));
 
     write2(st);
-  })
+
 }
 $('.dec').on('click',function(){
   var row  = $('tr');
@@ -75,8 +80,9 @@ $('.con').on('click',function(){
 })
 $.getJSON("https://api.covid19india.org/data.json",function(data){
   // console.log(data);
-  console.log(data.statewise);
-  var states = data.statewise;
+  d = data;
+  console.log(d.statewise);
+  var states = d.statewise;
 
   $('.confirmed').text(states[0].confirmed);
   $('.active').text(states[0].active);
@@ -84,7 +90,7 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
   $('.deaths').text(states[0].deaths);
 
   var st = states;
-  changeOrder("active");
+  changeOrder("confirmed");
   console.log(st);
 
-})
+});

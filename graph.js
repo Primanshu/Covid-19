@@ -1,9 +1,10 @@
 console.log('hello');
 var prev = 0;
+
 function getDate(test,i)
 {
   var date = test[i].updatetimestamp;
-  console.log(date);
+  //console.log(date);
   var day = date[0]+date[1];
   var month = date[3]+date[4];
   var year = date[6]+date[7]+date[8]+date[9];
@@ -18,7 +19,7 @@ function getDate(test,i)
 
 $.getJSON("https://api.covid19india.org/data.json",function(data){
   // console.log(data);
-  console.log(data.tested);
+  //console.log(data.tested);
   var test = data.tested;
   var dataPoints = []   //[{x:new date(y,m,d), y:}]
   for(var i=0;i<test.length;i++){
@@ -44,4 +45,4 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
 			]
 		});
   chart.render();
-})
+});
