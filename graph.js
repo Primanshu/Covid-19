@@ -8,12 +8,12 @@ function getDate(test,i)
   var day = date[0]+date[1];
   var month = date[3]+date[4];
   var year = date[6]+date[7]+date[8]+date[9];
-  var val = parseInt(test[i].totalpositivecases);
-  if(val==0 || val==='' || val<prev){
+  var val = (test[i].totalpositivecases);
+  if( val==='' || prev > parseInt(val)){
     val = prev;
   }
-  prev = val;
-  var point = {x: new Date(parseInt(year),parseInt(month)-1,parseInt(day)), y:val};
+  prev = parseInt(val);
+  var point = {x: new Date(parseInt(year),parseInt(month)-1,parseInt(day)), y:parseInt(val)};
   return point;
 }
 
@@ -21,7 +21,7 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
   // console.log(data);
   //console.log(data.tested);
   var test = data.tested;
-  var dataPoints = []   //[{x:new date(y,m,d), y:}]
+  var dataPoints = [];   //[{x:new date(y,m,d), y:}]
   for(var i=0;i<test.length;i++){
     var point = getDate(test,i);
     dataPoints.push(point);
@@ -32,6 +32,7 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
 				text : ""
 			},
       axisX:{
+        valueFormatString: "DD MMM" ,
         title: "Date",
         gridThickness: 2
       },
@@ -39,7 +40,9 @@ $.getJSON("https://api.covid19india.org/data.json",function(data){
         title: "Confirmed Cases"
       },
 			data : [{
-					type : "spline",
+					type : "area",
+          lineColor:'black',
+          color: "red",
 					dataPoints : dataPoints
 				}
 			]
