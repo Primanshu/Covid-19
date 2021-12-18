@@ -46,64 +46,28 @@
 
 
   <!-- todo: add a "please wait while we fetch the information for you line" -->
-  <br>
-
   <div class="grey container" id="pleaseWait">
     <p class="loader" style="margin-left: 47%;"></p>
     <p align = "center"> Please wait while we fetch the information for you! </p>
   </div>
 
-  <!-- Display total cases -->
-  <div class="container" align='center'>
-    <div class="row">
-      <div class="con col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <h2>Confirmed</h2>
-        <img src="Images\virus.png" alt=""><br>
-        <h3 class='confirmed'></h3>
-      </div>
-
-      <div class="act col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <h2>Pending</h2>
-        <img src="Images\cough.png" alt=""><br>
-        <h3 class='pending'></h3>
-      </div>
-
-      <div class="rec col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <h2>Recovered</h2>
-        <img src="Images\heart.png" alt=""><br>
-        <h3 class='recovered'></h3>
-      </div>
-
-      <div class="dec col-lg-3 col-md-3 col-sm-6 col-xs-6">
-        <h2>Deceased</h2>
-        <img src="Images\death.png" alt=""><br>
-        <h3 class='deaths'></h3>
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <br><br><br>
+  <br><br>
 
   <div class="grey container">
     <p><b>Please Note:</b> The <a href="https://data.covid19india.org/v4/min/data.min.json" target="blank">API</a> that is being used to gather Covid-19 related data in India is inactivated from 1st Nov, 2021. 
     The current data depicts the numbers from 1st January, 2020 to 31st October, 2021</p>
   </div>
 
-  <br><br>
+  <br>
   <!-- Statewise Cases  -->
   <div class="container">
-    <h1 align="center">Statewise Cases In India</h1>
+    <h1 align="center">Statewise Cases in India</h1>
     <br>
     <table align="center">
       <thead align="left">
         <th id="states"> States/UT</th>
-        <th class="con">Confirmed</th>
-        <th class="act"> Pending</th>
-        <th class="rec"> Recovered</th>
-        <th class='dec'> Deceased</th>
+        <th class="vaccine1">Vaccine Dose 1</th>
+        <th class="vaccine2"> Vaccine Dose 2</th>
       </thead>
     </table>
   </div>
@@ -125,7 +89,7 @@
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  <script type="text/javascript" src="covid_cases_table.js"></script>
+  <script type="text/javascript" src="vaccination_table.js"></script>
   <script type="text/javascript" src="events.js"></script>
 </body>
 

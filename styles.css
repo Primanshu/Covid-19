@@ -26,6 +26,25 @@ img {
   max-height: 65%;
 }
 
+.grey {
+  background-color: #ececec;
+  padding: 2px;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .row {
   margin-top: 90px;
 }
@@ -72,6 +91,18 @@ img {
 
 .dec {
   color: #cdd923;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.vaccine1 {
+  color: #001dc4;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.vaccine2 {
+  color: #04b01b;
   transition: 1s;
   cursor: pointer;
 }
