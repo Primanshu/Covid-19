@@ -47,9 +47,6 @@ $(document).ready(function () {
   //Note - Inside $.getJSON(), everything is synchronous. But outside it is asynchronous
   $.getJSON("https://data.covid19india.org/v4/min/data.min.json", function (data) {
 
-    console.log("Heyyy");
-    console.log(data);
-
     StateDataObject = data;
     //todo - create stateWiseData Array
 
@@ -76,15 +73,15 @@ $(document).ready(function () {
       totalVaccinatedDose1 += parseInt(stateObject.vaccinationDose1);
       totalVaccinatedDose2 += parseInt(stateObject.vaccinationDose2);
 
-      //adding the current state data, and filtering out garbage data
+      // adding the current state data, and filtering out garbage data
       if(stateObject.stateName!=undefined)
         StateWiseData.push(stateObject);
     }
 
-    if (StateWiseData) {
-      //todo - remove the Please wait line
+    // Removing please wait message
+    $('#pleaseWait').css("display", "none");
 
-      //todo - call write functions
+    if (StateWiseData) {
       write2(StateWiseData);
     }
   });
@@ -126,11 +123,6 @@ function write2(stateData) {
     var confirmed = stateData[i].confirmed;
     var deceased = stateData[i].deceased;
     var active = stateData[i].pending;
-
-    // cell.eq(1).append("<br> <span class = \"con \"> <i class = \"fa fa-caret-up \"> </i>" + confirmed + "</span>");
-    // cell.eq(2).append("<br> <span class = \"act \"> <i class = \"fa fa-caret-up \"> </i>" + active + "</span>");
-    // cell.eq(3).append("<br> <span class = \"rec \"> <i class = \"fa fa-caret-up \"> </i>" + recovered + "</span>");
-    // cell.eq(4).append("<br> <span class = \"dec \"> <i class = \"fa fa-caret-up \"> </i>" + deceased + "</span>");
   }
 }
 
