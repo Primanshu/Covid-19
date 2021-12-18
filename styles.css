@@ -85,7 +85,8 @@ tr {
 }
 
 td {
-  text-align: right;
+  text-align: left;
+  padding-left: 23px;
 }
 
 .one {

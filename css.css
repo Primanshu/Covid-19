@@ -25,8 +25,6 @@ img{
   text-align: left;
 }
 
-
-
 .trEvent{
   background:#d4d2d2;
 }
@@ -35,8 +33,6 @@ img{
   border-bottom: 1px solid red;
   background: black;
 }
-
-
 
 .Event{
   transition: 1s;
@@ -67,9 +63,6 @@ img{
   font-weight: bold;
 }
 
-td{
-  text-align: right;
-}
 .one{
   text-align: left;
 }

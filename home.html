@@ -17,7 +17,6 @@
   <body>
 
     <!-- Navbar -->
-
     <nav class="navbar navbar-expand-lg navbar-dark navbar-cust">
       <a class="navbar-brand" href="#">COVID-19 India</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,10 +26,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item ">
-            <a class="nav-link" href="index.html">Tracker<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="home.html">Tracker<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index2.html">More Information</a>
+            <a class="nav-link" href="more_information.html">More Information</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="helpline.html">Helpline</a>
@@ -38,6 +37,9 @@
       </div>
     </nav>
 
+
+    <!-- todo: Provide the information that the API is inactive from 1st Novemeber, 2021 -->
+    <!-- todo: add a "please wait while we fetch the information for you line" -->
 
 
     <!-- Display total cases -->
@@ -52,7 +54,7 @@
         <div class= "act col-lg-3 col-md-3 col-sm-6 col-xs-6">
           <h2>Pending</h2>
           <img src="Images\cough.png" alt=""><br>
-          <h3 class = 'active'></h3>
+          <h3 class = 'pending'></h3>
         </div>
 
         <div class="rec col-lg-3 col-md-3 col-sm-6 col-xs-6">
@@ -81,11 +83,10 @@
 
 
     <!-- Statewise Cases  -->
-
     <div class="container" >
       <h1 align="center">Statewise Cases in India</h1>
       <table align = "center">
-        <thead align = "right">
+        <thead align = "left">
           <th id = "states"> States/UT</th>
           <th class="con">Confirmed</th>
           <th class="act"> Pending</th>
@@ -97,9 +98,7 @@
 
 
     <footer>
-
           <h3>Stay Home, Stay Safe.</h3>
-
     </footer>
 
     <!-- Optional JavaScript -->
