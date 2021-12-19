@@ -44,13 +44,13 @@
     </div>
   </nav>
 
-
-  <!-- todo: add a "please wait while we fetch the information for you line" -->
   <br>
 
-  <div class="grey container" id="pleaseWait">
-    <p class="loader" style="margin-left: 47%;"></p>
-    <p align = "center"> Please wait while we fetch the information for you! </p>
+  <div class="container">
+    <div class="grey container" id="pleaseWait">
+      <p class="loader" style="margin-left: 47%;"></p>
+      <p align="center"> Please wait while we fetch the information for you! </p>
+    </div>
   </div>
 
   <!-- Display total cases -->
@@ -78,23 +78,37 @@
         <h2>Deceased</h2>
         <img src="Images\death.png" alt=""><br>
         <h3 class='deaths'></h3>
-      </div>    
+      </div>
     </div>
   </div>
 
 
   <br><br><br>
 
-  <div class="grey container">
-    <p><b>Please Note:</b> The <a href="https://data.covid19india.org/v4/min/data.min.json" target="blank">API</a> that is being used to gather Covid-19 related data in India is inactivated from 1st Nov, 2021. 
-    The current data depicts the numbers from 1st January, 2020 to 31st October, 2021</p>
+  <div class="container">
+    <div class="grey">
+      <p align="center"><b>Please Note:</b> The <a href="https://data.covid19india.org/v4/min/data.min.json"
+          target="blank">API</a> that is being used to gather Covid-19 related data in India is inactivated from 1st
+        Nov, 2021.
+        The current data depicts the numbers from 1st January, 2020 to 31st October, 2021</p>
+    </div>
   </div>
+
 
   <br><br>
   <!-- Statewise Cases  -->
   <div class="container">
     <h1 align="center">Statewise Cases In India</h1>
     <br>
+
+    <div class="grey container">
+      <p align="center">You can <b>sort the statewise cases in descending order</b> according to the
+        option chosen. You can click on the following options: <b>"Confirmed"</b>
+        or <b>"Pending"</b> or <b>"Recovered"</b> or <b>"Deceased"</b></p>
+    </div>
+
+    <br>
+
     <table align="center">
       <thead align="left">
         <th id="states"> States/UT</th>
