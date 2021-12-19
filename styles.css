@@ -107,6 +107,18 @@ img {
   cursor: pointer;
 }
 
+.vacc1 {
+  color: #001dc4;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.vacc2 {
+  color: #04b01b;
+  transition: 1s;
+  cursor: pointer;
+}
+
 .state-name {
   font-weight: bold;
 }
