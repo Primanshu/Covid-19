@@ -96,6 +96,9 @@ function sortByProperty(property) {
 
 function write2(stateData) {
 
+    $('.vaccine1').text(totalVaccinatedDose1);
+    $('.vaccine2').text(totalVaccinatedDose2);
+
     for (var i = 0; i < stateData.length; i++) {
         var serialNo = parseInt(i + 1);
         var mark = "<tr class = \"trow\"> <td style=\"padding-left:0px\"><strong>" + serialNo + '. ' + stateData[i].stateName + "</strong></td> <td>" + stateData[i].vaccinationDose1 + "</td> <td>" + stateData[i].vaccinationDose2 + "</td></tr>";
@@ -111,7 +114,7 @@ function changeOrder(prop) {
 }
 
 //sorting according to the option chosen
-$('.vaccine1').on('click', function () {
+$('.vacc1').on('click', function () {
     var row = $('tr');
     for (var i = 1; i < row.length; i++) {
         row[i].remove();
@@ -119,7 +122,7 @@ $('.vaccine1').on('click', function () {
     changeOrder("vaccinationDose1");
 })
 
-$('.vaccine2').on('click', function () {
+$('.vacc2').on('click', function () {
     var row = $('tr');
     for (var i = 1; i < row.length; i++) {
         row[i].remove();

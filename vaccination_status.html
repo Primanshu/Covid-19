@@ -45,10 +45,33 @@
   </nav>
 
 
-  <!-- todo: add a "please wait while we fetch the information for you line" -->
   <div class="grey container" id="pleaseWait">
     <p class="loader" style="margin-left: 47%;"></p>
     <p align = "center"> Please wait while we fetch the information for you! </p>
+  </div>
+
+  <br>
+  <!-- Display total Vaccination status -->
+  <div class="container" align='center'>
+    <div class="row">
+      <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0">
+      </div>
+
+      <div class="vacc1 col-lg-4 col-md-6 col-sm-6 col-xs-6">
+        <h2>Vaccine Dose 1</h2>
+        <img src="./Images/vaccine-1.png" alt=""><br>
+        <h3 class='vaccine1'></h3>
+      </div>
+
+      <div class="vacc2 col-lg-4 col-md-6 col-sm-6 col-xs-6">
+        <h2>Vaccine Dose 2</h2>
+        <img src="./Images/vaccine-1.png" alt=""><br>
+        <h3 class='vaccine2'></h3>
+      </div>
+      
+      <div class="col-lg-2 col-md-0 col-sm-0 col-xs-0">
+      </div>
+    </div>
   </div>
 
   <br><br>
@@ -59,15 +82,16 @@
   </div>
 
   <br>
-  <!-- Statewise Cases  -->
+
+  <!-- Statewise Vaccination  -->
   <div class="container">
-    <h1 align="center">Statewise Cases in India</h1>
+    <h1 align="center">Statewise Vaccination In India</h1>
     <br>
     <table align="center">
       <thead align="left">
         <th id="states"> States/UT</th>
-        <th class="vaccine1">Vaccine Dose 1</th>
-        <th class="vaccine2"> Vaccine Dose 2</th>
+        <th class="vacc1">Vaccine Dose 1</th>
+        <th class="vacc2"> Vaccine Dose 2</th>
       </thead>
     </table>
   </div>
